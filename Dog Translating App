@@ -1,0 +1,24 @@
+class Dog Translating App:
+    def __init__(self):
+        self.dictionary = {
+            "woof": "Hello",
+            "bark": "Food",
+            "growl": "Go away",
+            "whine": "Pet me"
+        }
+
+    def translate(self, bark):
+        return self.dictionary.get(bark, "Untranslatable")
+
+def main():
+    translator = DogTranslator()
+
+    print("Welcome to the Dog Translating App!")
+    while True:
+        bark = input("Enter a dog bark (woof, bark, growl, whine): ").lower()
+        if bark == "exit":
+            print("Exiting the Dog Translating App. Goodbye!")
+            break
+        translation = translator.translate(bark)
+        print("Translation: ", translation)
+
